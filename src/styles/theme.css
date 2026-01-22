@@ -1,4 +1,60 @@
-:root {
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
+@theme {
+  --color-base-lt: #ffffff;
+  --color-base-dk: #0c0f25;
+
+  /* Neutro */
+  --color-neutral-lt-3: #f5f5f5;
+  --color-neutral-lt-2: #e8e8e8;
+  --color-neutral-lt-1: #d4d4d4;
+  --color-neutral: #b1b1b1;
+  --color-neutral-dk-1: #878787;
+  --color-neutral-dk-2: #515151;
+  --color-neutral-dk-3: #363636;
+
+  /* Brand */
+  --color-brand-lt-2: #f5fff5;
+  --color-brand-lt-1: #9dde99;
+  --color-brand: #00db50;
+  --color-brand-dk-1: #07d15b;
+  --color-brand-dk-2: #0d9242;
+  --color-brand-dk-3: #6fbe7d;
+
+  /* Erro */
+  --color-error-lt: #fdf3f3;
+  --color-error: #de1616;
+
+  /* Sucesso */
+  --color-success-lt: #f4fbf3;
+  --color-success: #23b218;
+
+  /* Backgrounds */
+  --color-bg-lt-2: #f5fff5;
+  --color-bg-lt-1: #e8fceb;
+  --color-bg: #d7fad9;
+
+  /* Especial A */
+  --color-esp-a-lt-1: #fffaf2;
+  --color-esp-a: #e7c800;
+  --color-esp-a-dk-1: #d1a600;
+
+  /* Especial B */
+  --color-esp-b-lt-1: #ffa4aa;
+  --color-esp-b: #dc456d;
+
+  /* Especial C */
+  --color-esp-c-lt-2: #f5f1f9;
+  --color-esp-c-lt-1: #b4a0e3;
+  --color-esp-c: #3e296d;
+
+  /* Especial D */
+  --color-esp-d-lt-1: #9ccad4;
+  --color-esp-d: #7791a3;
+
+  /* Especial E */
+  --color-esp-e-lt-1: #ff7754;
+  --color-esp-e: #c63b3b;
+
+  /* Degradê */
+  --color-gradient-start: #07d15b;
+  --color-gradient-end: #21755f;
 }

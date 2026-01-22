@@ -1,9 +1,19 @@
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { OnboardingRoutes } from "@thiagomoraesn13/onboarding";
+import { SimulationEntry } from "./SimulationEntry";
+import { Home } from "./Home";
+
+export default function App() {
   return (
-    <div className="p-8">
-      <h1 className="text-xl font-bold">App Shell</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/onboarding/*" element={<OnboardingRoutes />} />
+        <Route path="/simulation/*" element={<SimulationEntry />} />
+
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
