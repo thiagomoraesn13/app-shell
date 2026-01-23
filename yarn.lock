@@ -683,6 +683,11 @@
     "@tailwindcss/oxide" "4.1.18"
     tailwindcss "4.1.18"
 
+"@thiagomoraesn13/design-tokens@^0.0.8":
+  version "0.0.8"
+  resolved "https://npm.pkg.github.com/download/@thiagomoraesn13/design-tokens/0.0.8/ec3972d0a1718ccb5aa4e89af63f2ccb6ecca58b#ec3972d0a1718ccb5aa4e89af63f2ccb6ecca58b"
+  integrity sha512-TGuPRfVaftwegm95nG/6fnMa4Ol2dV5GQAqxFwlTitcLXPUqLPOxWgB/zotkC06kVsSdoSXFV7sd2sMSQ/zZ0g==
+
 "@thiagomoraesn13/onboarding@^0.0.8":
   version "0.0.8"
   resolved "https://npm.pkg.github.com/download/@thiagomoraesn13/onboarding/0.0.8/7c27a463ccb5ca8efba4bb5d6dc0de1c5ea056c5#7c27a463ccb5ca8efba4bb5d6dc0de1c5ea056c5"
