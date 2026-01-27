@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@thiagomoraesn13/design-tokens": "^0.0.8",
+    "@thiagomoraesn13/design-tokens": "^0.0.10",
     "@thiagomoraesn13/onboarding": "^0.0.8",
     "@thiagomoraesn13/simulation": "^0.0.2",
     "@thiagomoraesn13/ui": "^0.0.5",
