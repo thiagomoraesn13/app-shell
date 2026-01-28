@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Design tokens copiados do pacote (gerado automaticamente)
+public/assets/design-tokens/

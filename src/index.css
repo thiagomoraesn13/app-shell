@@ -3,4 +3,7 @@
 
 @import "@thiagomoraesn13/design-tokens/index.css";
 
-@import "@thiagomoraesn13/design-tokens/themes/noverde.css";
+/* @import "@thiagomoraesn13/design-tokens/themes/noverde.css";
+ */
+
+@import "@thiagomoraesn13/design-tokens/dist/themes/noverde/index.css";

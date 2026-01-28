@@ -7,7 +7,8 @@ export function Home() {
   return (
     <div className="p-6 space-y-4">
       <h1 className="text-2xl font-bold">App Shell</h1>
-
+      {/*       <img src="/assets/design-tokens/themes/noverde/assets/logo.png" />
+       */}
       <GenericButton
         variant="primary"
         width="full"

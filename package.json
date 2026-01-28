@@ -4,15 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "copy:design-tokens": "node scripts/copy-design-tokens-assets.mjs",
+    "dev": "yarn copy:design-tokens && vite",
+    "build": "yarn copy:design-tokens && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@thiagomoraesn13/design-tokens": "^0.0.10",
+    "@thiagomoraesn13/design-tokens": "^0.0.12",
     "@thiagomoraesn13/onboarding": "^0.0.8",
-    "@thiagomoraesn13/simulation": "^0.0.2",
+    "@thiagomoraesn13/simulation": "^0.0.4",
     "@thiagomoraesn13/ui": "^0.0.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
