@@ -11,8 +11,8 @@ export function SimulationEntry() {
     <SimulationProvider
       value={{
         goToOnboarding: () => navigate("/onboarding/page2"),
-        theme: 'noverde',
-        assetsBaseUrl: '/assets/design-tokens'
+        theme: "noverde",
+        assetsBaseUrl: "/assets/partner",
       }}
     >
       <SimulationRoutes />

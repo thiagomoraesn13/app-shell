@@ -1,29 +1,25 @@
 import { useNavigate } from "react-router-dom";
-import { GenericButton } from "@thiagomoraesn13/ui";
+import { Button, Icon } from "@thiagomoraesn13/ui";
+import { cn } from "tailwind-variants";
 
+import { text } from "@thiagomoraesn13/design-tokens/tokens/colors.js";
 export function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="p-6 space-y-4">
-      <h1 className="text-2xl font-bold">App Shell</h1>
-      {/*       <img src="/assets/design-tokens/themes/noverde/assets/logo.png" />
-       */}
-      <GenericButton
-        variant="primary"
-        width="full"
-        onClick={() => navigate("/onboarding")}
-      >
-        Ir para Onboarding
-      </GenericButton>
+    <div className="p-6 space-y-2 flex flex-col gap-2">
+      <h1 className={cn(text("esp-b"), "font-bold")}>App Shell</h1>
 
-      <GenericButton
-        variant="secondary"
+      <h1 className={"text-error"}>App Shell</h1>
+
+      <Button
         width="full"
         onClick={() => navigate("/simulation")}
+        //loading={true}
       >
         Ir para Simulation
-      </GenericButton>
+      </Button>
+      <Icon name="AlertCircle" size={25} className="text-brand" />
     </div>
   );
 }

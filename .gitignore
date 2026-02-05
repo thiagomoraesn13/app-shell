@@ -24,4 +24,7 @@ dist-ssr
 *.sw?
 
 # Design tokens copiados do pacote (gerado automaticamente)
-public/assets/design-tokens/
+public/assets/
+
+src/tw-safelist.txt
+src/tw-safelist.meta.json

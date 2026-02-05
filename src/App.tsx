@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { OnboardingRoutes } from "@thiagomoraesn13/onboarding";
 import { SimulationEntry } from "./SimulationEntry";
 import { Home } from "./Home";
+import { OnboardingEntry } from "./OnboardingEntry";
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/onboarding/*" element={<OnboardingRoutes />} />
+        <Route path="/onboarding/*" element={<OnboardingEntry />} />
         <Route path="/simulation/*" element={<SimulationEntry />} />
 
         <Route path="*" element={<Home />} />
