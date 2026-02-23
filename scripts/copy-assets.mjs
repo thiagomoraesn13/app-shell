@@ -3,26 +3,10 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
-import dotenv from "dotenv";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const appRoot = path.resolve(__dirname, "..");
-
-function readEnvFileIfExists(filename) {
-  const p = path.join(appRoot, filename);
-  if (fs.existsSync(p)) dotenv.config({ path: p });
-}
-
-function getMode() {
-  // prioridade: MODE -> VITE_MODE -> NODE_ENV -> "development"
-  return (
-    (process.env.MODE || "").trim() ||
-    (process.env.VITE_MODE || "").trim() ||
-    (process.env.NODE_ENV || "").trim() ||
-    "development"
-  );
-}
 
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
@@ -75,18 +59,10 @@ function writeJson(p, data) {
   fs.writeFileSync(p, JSON.stringify(data, null, 2) + "\n", "utf8");
 }
 
-// ---- load env files (optional) ----
-const mode = getMode();
-
-// Você pode manter .env sempre carregado se quiser (comum em muitos setups)
-readEnvFileIfExists(".env");
-readEnvFileIfExists(`.env.${mode}`);
-
-// ---- THEME / PACKAGE ----
 const theme = (process.env.VITE_THEME || "").trim() || "noverde";
 const pkg =
   (process.env.DESIGN_TOKENS_PKG || "").trim() ||
-  "@thiagomoraesn13/design-tokens";
+  "@dotzinc/web-lib-design-foundation";
 
 const require = createRequire(import.meta.url);
 
@@ -127,16 +103,13 @@ const prev = readJsonIfExists(manifestPath);
 const nextManifest = {
   pkg,
   theme,
-  mode,
   assetsSrc,
   copiedAt: new Date().toISOString(),
   srcHash,
 };
 
 if (prev?.srcHash === srcHash && prev?.pkg === pkg && prev?.theme === theme) {
-  console.log(
-    `[copy-assets] SKIP: assets não mudaram (theme=${theme}, mode=${mode}).`,
-  );
+  console.log(`[copy-assets] SKIP: assets não mudaram (theme=${theme}).`);
   process.exit(0);
 }
 
@@ -148,5 +121,5 @@ fs.cpSync(assetsSrc, destDir, { recursive: true });
 writeJson(manifestPath, nextManifest);
 
 console.log(
-  `[copy-assets] OK: copiado ${assetsSrc} -> ${destDir} (theme=${theme}, mode=${mode}).`,
+  `[copy-assets] OK: copiado ${assetsSrc} -> ${destDir} (theme=${theme}).`,
 );

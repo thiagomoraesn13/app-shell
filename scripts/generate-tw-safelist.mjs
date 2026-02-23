@@ -5,7 +5,8 @@ import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
 
-const pkg = process.env.DESIGN_TOKENS_PKG || "@thiagomoraesn13/design-tokens";
+const pkg =
+  process.env.DESIGN_TOKENS_PKG || "@dotzinc/web-lib-design-foundation";
 
 // ajuste aqui se seu export real for outro
 const colorsEntry = require.resolve(`${pkg}/tokens/colors.js`);

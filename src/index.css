@@ -1,18 +1,15 @@
-/* Tailwind completo — APENAS no app shell */
 @import "tailwindcss";
 
-/* Design tokens e tema do app */
 @import "@thiagomoraesn13/design-tokens/index.css";
 @import "@thiagomoraesn13/design-tokens/themes/noverde/index.css";
+@import "@thiagomoraesn13/design-tokens/utilities.css";
 
 /* CSS das libs publicadas */
-@import "@thiagomoraesn13/ui/styles.css";
+@import "@dotzinc/web-lib-ui/styles.css";
 @import "@thiagomoraesn13/simulation/styles.css";
 
 /* Onde o Tailwind deve escanear classes do app */
-@source "./tw-safelist.txt";
 @source "./**/*.{html,js,jsx,ts,tsx}";
-
 /* Override final de fonte — app manda */
 html,
 body {
